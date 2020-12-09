@@ -1,0 +1,13 @@
+.background-form-site-protection{
+    background: linear-gradient(to right, #7474bf, #348ac7);
+    height: 100vh;
+    .form-site-protection {
+        transform: translateY(50%);
+        color: #ffffff;
+        background: linear-gradient(to right, #7474bf, #348ac7);
+        legend {
+                color: #ffffff;
+                text-align: center;
+        }
+    }
+}
