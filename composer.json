@@ -1,21 +1,21 @@
 {
-    "name": "sonhaichu/laravel-package-scaffolding",
-    "description": "Boilerplate template for laravel package",
+    "name": "webpress/site-protection",
+    "description": "Package for internal company",
     "authors": [
         {
-            "name": "sonhaichu",
-            "email": "sonhaichu@gmail.com"
+            "name": "linhnn",
+            "email": "linhnn@vmms.vn"
         }
     ],
     "autoload": {
         "classmap": [],
         "psr-4": {
-            "Package\\": "src/app/"
+            "VCComponent\\Laravel\\Site\\": "src/app/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Package\\Test\\": "tests/"
+            "VCComponent\\Laravel\\Site\\Test\\": "tests/"
         }
     },
     "require": {},
@@ -29,7 +29,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Package\\Providers\\PackageServiceProvider"
+                "VCComponent\\Laravel\\Site\\Providers\\SiteProtectionServiceProvider"
             ]
         }
     },
