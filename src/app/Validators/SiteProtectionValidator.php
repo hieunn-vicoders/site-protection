@@ -15,7 +15,7 @@ class SiteProtectionValidator
             ],
             [
                 'account.required'    => "Họ tên không được để trống",
-                'password.required'      => "Địa chỉ không được để trống",
+                'password.required'      => "Mật khẩu không được để trống",
             ]
         );
     }
