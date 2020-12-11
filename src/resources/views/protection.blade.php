@@ -57,9 +57,9 @@
                                 oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
                                 onchange="this.setCustomValidity('')">
                         </div>
-                        <div class="form-group">
-                            <label for="route">current_route:</label>
-                            <input type="text" class="form-control" disabled name="route" value='{{$current_route}}'>
+                        <div class="form-group" hidden>
+                            <input type="text" class="form-control" hidden disabled name="route"
+                                value='{{$current_route}}'>
                         </div>
                         <button type="submit" class="btn btn-success">Đăng nhập</button>
                     </form>
