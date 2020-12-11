@@ -30,6 +30,7 @@ class SiteProtectionServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/../../resources/views', "protection_page");
         $this->publishes([
             __DIR__ . '/../../resources/sass/_protection.scss' => base_path('/resources/sass/protection/_protection.scss'),
+            __DIR__ . '/../../config/site-protection.php'      => config_path('site-protection.php'),
         ]);
     }
 }
