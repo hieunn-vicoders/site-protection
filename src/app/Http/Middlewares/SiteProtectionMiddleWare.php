@@ -10,7 +10,7 @@ class SiteProtectionMiddleWare
 {
     public function handle($request, Closure $next)
     {
-        if (env('SITE_PROTECTION') == true) {
+        if (env('SITE_PROTECTION') === true) {
             if (isset($_COOKIE['site-authentication'])) {
                 return $next($request);
             }
