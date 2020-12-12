@@ -9,18 +9,20 @@ use Illuminate\Support\Facades\Redirect;
 
 class SiteProtectionController extends Controller
 {
-    public $account;
-    public $password;
+    protected $account;
+    protected $password;
+
     public function __construct()
     {
-        if (config('site-protection.account') && config('site-protection.password')) {
-            $this->account  = config('site-protection.account');
-            $this->password = config('site-protection.password');
+        if (config('site-protection.default.account') && config('site-protection.default.password')) {
+            $this->account  = config('site-protection.default.account');
+            $this->password = config('site-protection.default.password');
         } else {
-            $this->account  = env("ACCOUNT_SITE_PROTECTION");
-            $this->password = env("PASSWORD_SITE_PROTECTION");
+            $this->account  = config('site-protection.custom.account');
+            $this->password = config('site-protection.custom.password');
         }
     }
+
     public function checkFormLoginSiteProtection(Request $request)
     {
         if ($request->account === $this->account && $request->password === $this->password) {

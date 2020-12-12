@@ -3,14 +3,12 @@
 namespace VCComponent\Laravel\Site\Http\Middlewares;
 
 use Closure;
-use Illuminate\Http\Response;
 
-// use Symfony\Component\HttpFoundation\Cookie;
 class SiteProtectionMiddleWare
 {
     public function handle($request, Closure $next)
     {
-        if (env('SITE_PROTECTION') === true) {
+        if (config('site-protection.enable') === true) {
             if (isset($_COOKIE['site-authentication'])) {
                 return $next($request);
             }
