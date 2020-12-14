@@ -14,12 +14,9 @@ class SiteProtectionController extends Controller
 
     public function __construct()
     {
-        if (config('site-protection.default.account') && config('site-protection.default.password')) {
-            $this->account  = config('site-protection.default.account');
-            $this->password = config('site-protection.default.password');
-        } else {
-            $this->account  = config('site-protection.custom.account');
-            $this->password = config('site-protection.custom.password');
+        if (config('site-protection.custom_or_default.account') && config('site-protection.custom_or_default.password')) {
+            $this->account  = config('site-protection.custom_or_default.account');
+            $this->password = config('site-protection.custom_or_default.password');
         }
     }
 
