@@ -48,17 +48,15 @@
                         <div class="form-group">
                             <label for="account">Tài khoản:</label>
                             <input type="text" class="form-control" required name="account"
-                                oninvalid="this.setCustomValidity('Vui lòng nhập tài khoản')"
-                                onchange="this.setCustomValidity('')" value={{old('account')}}>
+                                oninvalid="this.setCustomValidity('Vui lòng nhập tài khoản')">
                         </div>
                         <div class="form-group">
                             <label for="password">Mật khẩu:</label>
                             <input type="password" class="form-control" required name="password"
-                                oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')"
-                                onchange="this.setCustomValidity('')">
+                                oninvalid="this.setCustomValidity('Vui lòng nhập mật khẩu')">
                         </div>
                         <div class="form-group" hidden>
-                            <input type="text" class="form-control" hidden disabled name="route"
+                            <input type="text" class="form-control" name="route"
                                 value='{{$current_route}}'>
                         </div>
                         <button type="submit" class="btn btn-success">Đăng nhập</button>
