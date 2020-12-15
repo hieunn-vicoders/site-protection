@@ -23,7 +23,7 @@ class SiteProtectionController extends Controller
     public function checkFormLoginSiteProtection(Request $request)
     {
         if ($request->account === $this->account && $request->password === $this->password) {
-            $cookie = cookie::make('site-authentication', Hash::make($this->account), 1440);
+            $cookie = cookie::make('site-authentication', Hash::make($this->password), 1440);
             return Redirect::to($request->route)->withCookie($cookie);
         }
         return Redirect::back()->with("errors", 'Tài khoản hoặc mật khẩu không hợp lệ !');
