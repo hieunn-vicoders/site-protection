@@ -9,7 +9,7 @@
 ## Installation
 To include the package in your project, Please run following command.
 ```
-Coming soon
+composer require webpress/site-protection
 ```
 ## Service Provider
 In your `config/app.php` add the following Service Providers to the end of the providers array:
