@@ -7,7 +7,7 @@
     <link rel="stylesheet preload" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet preload" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet preload" type="text/css" href="{{url('/css/app.css')}}">
-    <title>Đăng nhập nội bộ</title>
+    <title>Đăng nhập nội bộ</title>
 </head>
 
 <body class="protection">
@@ -26,7 +26,7 @@
                         <div class="row">
                             <div class="info-company">
                                 <p>Công Ty Truyền Thông Đa Phương Tiện Việt Nam - VMMS</p>
-                                <p>Địa chỉ: Tầng 3, số 14 Pháo Đài Láng, Q.Đống Đa, TP.Hà Nội </p>
+                                <p>Địa chỉ: Tầng 3, số 14 Pháo Đài Láng, Q.Đống Đa, TP.Hà Nội</p>
                                 <p>Tư vấn 24/7: 0982 180 180</p>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                         </div>
                         <div class="form-group" hidden>
                             <input type="text" class="form-control" name="route"
-                                value='{{$current_route}}'>
+                                value='{{($route === "home") ? "/" : $route}}'>
                         </div>
                         <button type="submit" class="btn btn-success">Đăng nhập</button>
                     </form>
