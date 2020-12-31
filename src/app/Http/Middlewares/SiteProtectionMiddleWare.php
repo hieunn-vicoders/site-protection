@@ -17,7 +17,7 @@ class SiteProtectionMiddleWare
 
     public function handle($request, Closure $next)
     {
-        if (!$this->checkRequest($request)) {
+        if (!$this->checkQueryString($request)) {
             if (config('site-protection.enable') === true) {
                 if (isset($_COOKIE['site-authentication']) && Hash::check(config('site-protection.custom_or_default.password'), $_COOKIE['site-authentication'])) {
                     return $next($request);
@@ -33,7 +33,7 @@ class SiteProtectionMiddleWare
         }
     }
 
-    public function checkRequest(Request $request)
+    public function checkQueryString(Request $request)
     {
         if ($request->has('site_protection_username') && $request->has('site_protection_password')) {
             $site_protection_username = config('site-protection.custom_or_default.account');
