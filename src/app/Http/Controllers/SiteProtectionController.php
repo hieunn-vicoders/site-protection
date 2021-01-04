@@ -15,6 +15,9 @@ class SiteProtectionController extends Controller
 
     public function __construct()
     {
+        if(config('site-protection.enable') === false){
+            redirect('/')->send();
+        }
         if (config('site-protection.custom_or_default.account') && config('site-protection.custom_or_default.password')) {
             $this->account  = config('site-protection.custom_or_default.account');
             $this->password = config('site-protection.custom_or_default.password');
