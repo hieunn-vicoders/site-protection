@@ -12,7 +12,7 @@ class SiteProtectionMiddleWare
 
     public function __construct(Request $request)
     {
-        $this->route     = $request->path();
+        $this->route = $request->path();
     }
 
     public function handle($request, Closure $next)
@@ -28,9 +28,9 @@ class SiteProtectionMiddleWare
                     return redirect()->route('show.protection', ['route' => $this->route]);
                 }
             }
-        } else {
             return $next($request);
         }
+        return $next($request);
     }
 
     public function checkQueryString(Request $request)
