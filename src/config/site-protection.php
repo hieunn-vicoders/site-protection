@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'enable'            => env('SITE_PROTECTION'),
+    'enable'            => env('SITE_PROTECTION', false),
 
     'minutes'           => 1440,
 
